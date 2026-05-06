@@ -13,16 +13,16 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: charybdis_left
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: charybdis_right
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: keyboard_reset
   
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: charybdis_dongle
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset
     artifact-name: dongle_reset
