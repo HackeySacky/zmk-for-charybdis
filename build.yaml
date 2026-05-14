@@ -22,9 +22,10 @@ include:
   - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: keyboard_reset
-  
+
   - board: xiao_ble//zmk
     shield: charybdis_dongle
+    artifact-name: charybdis_dongle
   - board: xiao_ble//zmk
     shield: settings_reset
     artifact-name: dongle_reset
