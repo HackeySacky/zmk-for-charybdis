@@ -41,7 +41,6 @@
     };
 };
 
-#include <zephyr/dt-bindings/input-input-event-codes.h>
 #include <input/input-processors.dtsi>
 
 / {
