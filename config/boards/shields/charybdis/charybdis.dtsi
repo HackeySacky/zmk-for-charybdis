@@ -1,9 +1,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "charybdis-layouts.dtsi"
+
+&physical_layout0 {
+  transform = <&default_transform>;
+};
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &physical_layout0;
     };
 
     default_transform: keymap_transform_0 {
@@ -34,4 +39,35 @@
 	  	  , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
     };
+};
+
+#include <zephyr/dt-bindings/input-input-event-codes.h>
+#include <input/input-processors.dtsi>
+
+/ {
+    split_inputs {
+      #address-cells = <1>;
+      #size-cells = <0>;
+    };
+    
+    trackball: trackball@0 {
+        status = "disabled";
+        compatible = "pixart,pmw3610-alt";
+        reg = <0>;
+    };
+};
+
+
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball>;
+
+        scroll_layer {
+          layers = <4>;
+          input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+    };    
 };

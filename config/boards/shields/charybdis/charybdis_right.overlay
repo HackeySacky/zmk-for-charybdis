@@ -42,6 +42,9 @@
     };
 };
 
+#include <zephyr/dt-bindings/input-input-event-codes.h>
+#include <input/input-processors.dtsi>
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -63,7 +66,7 @@
 
         invert-x;
         swap-xy; // 90 deg rotation
-
+        force-awake;
         // scroll-layers = <4>;
         // snipe-layers = <3>;
         // automouse-layer = <3>;
@@ -75,6 +78,12 @@
 / {
     trackball_listener {
         compatible = "zmk,input-listener";
+        status = "okay";
         device = <&trackball>;
+
+        scroll_layer {
+          layers = <4>;
+          input-processors = <&zip_xy_to_scroll_mapper>;
+        }
     };
 };
