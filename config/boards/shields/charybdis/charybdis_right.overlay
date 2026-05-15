@@ -5,6 +5,7 @@
  */
  
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -69,8 +70,6 @@
         // automouse-layer = <3>;
     };
 };
-
-
 
 / {
     trackball_listener {

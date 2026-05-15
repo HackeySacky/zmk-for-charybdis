@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/input_transform.h>
 #include "charybdis-layouts.dtsi"
+#include <input/processors.dtsi>
 
 &physical_layout0 {
   transform = <&default_transform>;
@@ -54,8 +55,6 @@
         reg = <0>;
     };
 };
-
-
 
 / {
     trackball_listener {
