@@ -50,7 +50,7 @@
       trackball: trackball@0 {
         status = "disabled";
         compatible = "pixart,pmw3610-alt";
-        //reg = <0>;
+        reg = <0>;
       };
     };
 };
