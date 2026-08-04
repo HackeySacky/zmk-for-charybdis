@@ -8,7 +8,7 @@
 };
 
 / {
-    pro_micro: &xiao_d { }; 
+    pro_micro: &mok_pro_micro_node { }; 
     
     chosen {
         zmk,kscan = &mock_kscan;
