@@ -53,17 +53,16 @@
         reg = <0>;
       };
     };
-};
 
-/ {
     trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&trackball>;
+      compatible = "zmk,input-listener";
+      status = "disabled";
+      device = <&trackball>;
 
-        scroll_layer {
-          layers = <4>;
-          input-processors = <&zip_xy_to_scroll_mapper>;
-        };
-    };    
+      scroll_layer {
+        layers = <3>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+      };
+    }
 };
+
