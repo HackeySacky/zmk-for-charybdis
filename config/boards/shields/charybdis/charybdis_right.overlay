@@ -12,7 +12,7 @@
 };
 
 &kscan0 {
-	diode-direction = "col2row"
+	diode-direction = "col2row";
   
   col-gpios
 		= <&pro_micro 19 (GPIO_ACTIVE_HIGH)>
