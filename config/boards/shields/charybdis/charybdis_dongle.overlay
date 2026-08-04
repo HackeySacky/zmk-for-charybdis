@@ -8,6 +8,7 @@
 };
 
 / {
+    pro_micro: &nice_nano_v2_d { }; 
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
