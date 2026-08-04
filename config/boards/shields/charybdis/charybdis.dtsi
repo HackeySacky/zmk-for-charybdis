@@ -47,7 +47,7 @@
       #address-cells = <1>;
       #size-cells = <0>;
     
-      trackball: trackball@0 {
+      trackball_split: trackball_split@0 {
         status = "disabled";
         compatible = "pixart,pmw3610-alt";
         reg = <0>;
@@ -57,7 +57,7 @@
     trackball_listener: trackball_listener {
       compatible = "zmk,input-listener";
       status = "disabled";
-      device = <&trackball>;
+      device = <&trackball_split>;
 
       scroll_layer {
         layers = <3>;
